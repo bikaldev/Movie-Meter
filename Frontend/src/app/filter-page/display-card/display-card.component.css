@@ -1,0 +1,76 @@
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px;
+    border: 1px solid #eee;
+    transition: all 0.2s ease-in-out;
+    margin-top: 5px;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.poster {
+    height: 360px;
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-left: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.info-row {
+    margin-bottom: 0px;
+}
+
+.title,.year,.genre, .content-title,.synopsis,.content,.cast,.language, .subscription {
+    margin-bottom: 5px;
+}
+
+.content-col{
+    padding-left:5px;
+    padding-right: 5px;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.year {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.genre {
+    font-size: large;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.content, .synopsis, .language, .director, .subscription {
+    font-size: medium;
+    font-weight: normal;
+}
+
+.content-title {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.rating-badge {
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    background-color: purple;
+}
+
+.rating-value {
+    margin-top: 13px;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}

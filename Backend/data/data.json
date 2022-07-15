@@ -1,0 +1,107 @@
+{
+    "0": {
+        "title":"The Godfather",
+        "year": "1972",
+        "genre": [
+            "Drama",
+            "Crime"
+        ],
+        "rating": 90
+    }
+    
+    ,
+    "1":  {
+        "title":"Parasite",
+        "year": "2019",
+        "genre": [
+            "Drama",
+            "Comedy",
+            "Thriller"
+        ],
+        "rating": 80
+    },
+    "2":{
+        "title":"Seven Samurai",
+        "year": "1954",
+        "genre": [
+            "Drama",
+            "Action"
+        ],
+        "rating": 85
+    },
+    "3": {
+        "title":"Psycho",
+        "year": "1960",
+        "genre": [
+            "Drama",
+            "Horror",
+            "Thriller"
+        ],
+        "rating": 93
+    },
+    "4": {
+        "title":"Lawrence of Arabia",
+        "year": "1962",
+        "genre": [
+            "War",
+            "History",
+            "Adventure"
+        ],
+        "rating": 82
+    },
+    "5": {
+        "title":"The Godfather: Part II",
+        "year": "1974",
+        "genre": [
+            "Drama",
+            "Crime"
+        ],
+        "rating": 83
+    },
+    "6": {
+        "title":"Rear Window",
+        "year": "1954",
+        "genre": [
+            "Mystery",
+            "Thriller"
+        ],
+        "rating": 89
+    },
+    "7": {
+        "title":"Schindler's List",
+        "year": "1993",
+        "genre": [
+            "Drama",
+            "History",
+            "War"
+        ],
+        "rating": 88
+    },
+    "8":{
+        "title":"12 Angry Men",
+        "year": "1957",
+        "genre": [
+            "Drama"
+        ],
+        "rating": 88
+    },
+    "9": {
+        "title":"Pulp Fiction",
+        "year": "1994",
+        "genre": [
+            "Thriller",
+            "Crime"
+        ],
+        "rating": 86
+    },
+    "-1": {
+        "title":"zzzzzzzz",
+        "year":"5000",
+        "genre": [],
+        "avgRating":1000,
+        "imdb":1000,
+        "letterboxd":1000,
+        "critic":10000,
+        "metacritic":1000
+    }
+}

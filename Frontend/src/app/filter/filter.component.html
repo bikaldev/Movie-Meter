@@ -1,0 +1,75 @@
+<div class="cotainer">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <div class="dropdown">
+                <button class = "btn btn-primary dropdown-toggle" [appDropdown] = "genre"> Genre </button>
+            </div>
+            <div class="dropdown-menu" #genre>
+                <p class="dropdown-item" id="action" (click)="onGenre($event)" appDropdownItem >Action</p>
+                <p class="dropdown-item" id="adventure" (click)="onGenre($event)" appDropdownItem >Adventure</p>
+                <p class="dropdown-item" id="animation" (click)="onGenre($event)" appDropdownItem >Animation</p>
+                <p class="dropdown-item" id="comedy" (click)="onGenre($event)" appDropdownItem >Comedy</p>
+                <p class="dropdown-item" id="crime" (click)="onGenre($event)" appDropdownItem>Crime</p>
+                <p class="dropdown-item" id="documentary" (click)="onGenre($event)" appDropdownItem>Documentary</p>
+                <p class="dropdown-item" id="drama" (click)="onGenre($event)" appDropdownItem>Drama</p>
+                <p class="dropdown-item" id="family" (click)="onGenre($event)" appDropdownItem>Family</p>
+                <p class="dropdown-item" id="fantasy" (click)="onGenre($event)" appDropdownItem>Fantasy</p>
+                <p class="dropdown-item" id="history" (click)="onGenre($event)" appDropdownItem>History</p>
+                <p class="dropdown-item" id="horror" (click)="onGenre($event)" appDropdownItem>Horror</p>
+                <p class="dropdown-item" id="music" (click)="onGenre($event)" appDropdownItem>Music</p>
+                <p class="dropdown-item" id="mystery" (click)="onGenre($event)" appDropdownItem>Mystery</p>
+                <p class="dropdown-item" id="romance" (click)="onGenre($event)" appDropdownItem>Romance</p>
+                <p class="dropdown-item" id="scifi" (click)="onGenre($event)" appDropdownItem>Science Fiction</p>
+                <p class="dropdown-item" id="thriller" (click)="onGenre($event)" appDropdownItem>Thriller</p>
+                <p class="dropdown-item" id="war" (click)="onGenre($event)" appDropdownItem>War</p>
+                <p class="dropdown-item" id="western" (click)="onGenre($event)" appDropdownItem>Western</p>
+            </div>
+        </div>
+        <div class="col-auto" [appDropdown]="logic">
+            <div class="dropdown">
+                <button class = "btn btn-primary dropdown-toggle"> {{ this.genreLogic }}  </button>
+            </div>
+            <div class="dropdown-menu" #logic>
+                <div class="dropdown-item" (click) = "onGenreLogic($event)" id="OR"> OR </div>
+                <div class="dropdown-item" (click) = "onGenreLogic($event)" id="AND"> AND </div>
+            </div>
+        </div>
+        <div class="col-auto">
+            <p class = "filter-tag align-item-center"> Sort By: </p>
+        </div>
+        <div class="col-auto" [appDropdown]="sortMenu">
+            <div class="dropdown" >
+                <button class = "btn btn-primary dropdown-toggle"> {{ this.sortBy.value }}  </button>
+            </div>
+            <div class="dropdown-menu" #sortMenu>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="title"> Title </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="year"> Date Released </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="avgRating"> Average Rating </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="imdb"> IMDB </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="critic"> Critic Score </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="metacritic"> Metacritic Score </div>
+                <div class="dropdown-item" (click) = "onSortBy($event)" id="letterboxhd"> Letterboxhd </div>
+            </div>
+        </div>
+        <div class="col-auto" [appDropdown]="sortOrderMenu">
+            <div class="dropdown" >
+                <button class = "btn btn-primary dropdown-toggle" *ngIf="this.sortOrder === 'desc'"> &darr; </button>
+                <button class = "btn btn-primary dropdown-toggle" *ngIf="this.sortOrder === 'asc'"> &uarr; </button>
+            </div>
+            <div class="dropdown-menu" #sortOrderMenu>
+                <div class="dropdown-item" (click) = "onSortOrder($event)" id="asc"> &uarr; </div>
+                <div class="dropdown-item" (click) = "onSortOrder($event)" id="desc"> &darr; </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <ngx-slider  [(value)] = "this.minYear" [(highValue)]="this.maxYear" [options] = "this.yearOption"></ngx-slider>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <ngx-slider  [(value)] = "this.minRate" [(highValue)]="this.maxRate" [options] = "this.rateOption"></ngx-slider>
+        </div>
+    </div>
+</div>

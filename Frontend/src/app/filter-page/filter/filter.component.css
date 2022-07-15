@@ -1,0 +1,13 @@
+.filter-tag {
+    font-size: x-large;
+    font-weight: bold;
+    color: #343A40
+}
+
+.dropdown-item {
+    margin-bottom: 2px;
+}
+
+.filter-button {
+    background-color:#0DB9F0 ;
+}

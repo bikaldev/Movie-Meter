@@ -1,0 +1,46 @@
+<app-filter (onFilter)="onFilterButton($event)"></app-filter>
+<hr>
+
+<div class="container" *ngIf = "filmList.length > 0 && !this.isFetching">
+    <div class="search-result" 
+    infinite-scroll 
+    [infiniteScrollDistance]="2" 
+    [infiniteScrollThrottle]="50" 
+    (scrolled)="onScroll()" >
+    <div class="row" *ngFor="let film of filmList">
+        <app-display-card [film] = "film"></app-display-card>
+    </div>
+    <div class="row justify-content-center" *ngIf="this.loadSpinner">
+        <div class="col-1">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>    
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container" *ngIf = "filmList.length === 0 && !this.isFetching">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <p class = "empty-text">No Records Found!</p>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf = "this.isFetching">
+    <div class="row justify-content-center">
+        <div class="col-1">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="!this.notEmpty">
+    <div class="row justify-content-center">
+        <div class="col-1 alert">
+            <p> - </p>
+        </div>
+    </div>
+</div>
+

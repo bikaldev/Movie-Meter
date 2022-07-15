@@ -1,0 +1,103 @@
+<div class="container card">
+    <div class="row">
+        <div class="col-auto">
+            <img [src]="film.posterUrl" class = "poster">
+        </div>
+        <div class="col-7" style="padding:5px">
+            <div class="container info">
+                <div class="row info-row">
+                    <p class = "title">{{ film.title }}</p>
+                </div>
+                <div class="row info-row">
+                    <p class = "year">{{ film.year }}</p>
+                </div>
+                <div class="row info-row">
+                    <p class = "genre">{{ film.genre }}</p>
+                </div>
+                <div class="row info-row">
+                    <p class = "synopsis"> {{ film.synopsis }} </p>
+                </div>
+                <div class="row info-row">
+                    <div class="col-auto content-col">
+                        <p class = "content-title"> Director: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "synopsis">{{ film.director }} </p>
+                    </div>
+                </div>
+                <div class="row info-row">
+                    <div class="col-auto content-col">
+                        <p class = "content-title"> Cast: </p>
+                    </div>
+                    <div class="col-auto content-col" *ngFor="let cast of film.cast">
+                        <p class = "cast">{{ cast }}</p>
+                    </div>
+                </div>
+                <div class="row info-row" *ngIf = "film.language != null">
+                    <div class="col-auto content-col">
+                        <p class = "content-title"> Language:  </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "language"> {{ film.language }} </p>
+                    </div>
+                </div>
+                <div class="row info-row" *ngIf="film.subscription != null">
+                    <div class="col-auto content-col">
+                        <p class = "content-title"> Subscription: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "subscription"> {{ film.subscription }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="padding:5px">
+            <div class="container-auto">
+                <div class="row-auto">
+                    <div class="container rating-badge">
+                        <div class="row align-item-center justify-content-center">
+                            <div class="col-auto">
+                                <p class = "rating-value"> {{ film.avgRating }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+                <div class="row" *ngIf="film.imdb != null" style = "margin-top: 10px">
+                    <div class="col-auto">
+                        <p class = "content-title"> IMDB: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "content"> {{ film.imdb }} </p>
+                    </div>
+                </div>
+                
+                <div class="row" *ngIf="film.critic != null">
+                    <div class="col-auto">
+                        <p class = "content-title"> Critic Score: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "content"> {{ film.critic }} </p>
+                    </div>
+                </div>
+                
+                <div class="row" *ngIf="film.metacritic != null">
+                    <div class="col-auto">
+                        <p class = "content-title"> Metacritic Score: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "content"> {{ film.metacritic }} </p>
+                    </div>
+                </div>
+                
+                <div class="row" *ngIf="film.letterboxhd != null">
+                    <div class="col-auto">
+                        <p class = "content-title"> Letterboxhd: </p>
+                    </div>
+                    <div class="col-auto content-col">
+                        <p class = "content"> {{ film.letterboxhd }} </p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
